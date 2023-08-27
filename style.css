@@ -1,0 +1,115 @@
+
+:root {
+
+    --bg-theme: rgba(92, 139, 126, 255);
+}
+
+ 
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    
+}
+/* FLEX CONTAINERS */
+
+.main-container {
+    /* main container (whole sign up form + logo) */
+    margin: 40px; 
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+}
+
+.fname-container {
+    /* sets logo and input (and label) as flex elements in row */
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    /* setting form as flex container so that each input is a flex element */
+    display: flex;
+    flex-direction: column;
+}
+
+/* STYLING */
+
+section {
+    /* setting section as container for h3 and form */
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-text{
+    padding: 40px;
+}
+
+img[alt="logo"] {
+    padding: 0px 40px 0px 40px;
+}
+
+img[alt="background-image"] {
+}
+
+
+body {
+    background-image: url(assets/background-image.jpg);
+}
+
+
+
+label {
+    /* hiding the label, using placeholder as label instead */
+    display: none;
+}
+
+.fname-container input[type='text'] {
+    /* setting up input box */
+    height: 2.75em;
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid white;
+    color: white;
+    background-color: var(--bg-theme);
+}
+
+.fname-container input[type="text"]::placeholder {
+    /* placeholder of input box */
+    font-size: 16px;
+    color: white;
+}
+
+
+
+.sign-up-section {
+    color: white;
+    background-color: var(--bg-theme);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
+
+/* TITLE */
+
+title {
+    position: relative
+}
+
+.title {
+    padding: 40px;
+}
+
+.title > h1 {
+    color: var(--bg-theme)
+}
+
+.description {
+    position: relative;
+    font-size: 12px;
+    bottom: 8px;
+    font-weight: 100;
+}
