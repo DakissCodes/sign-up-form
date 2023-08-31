@@ -14,14 +14,20 @@
     
 }
 /* FLEX CONTAINERS */
+    
+body {
+    background-image: url(assets/background-image-2.jpg);
+    background-size: cover;
+}
 
 .main-container {
-    /* main container (whole sign up form + logo) */
-
-    margin: 40px; 
+    /* main container (wholesign up form + logo) */
+    backdrop-filter: blur(25px);
+    background-blend-mode: overlay;
+    margin: 3rem; 
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(235, 235, 235);
+    background-color: #ffffff7d;
 }
 
 .fname-container {
@@ -45,17 +51,18 @@ section {
 }
 
 .intro-text{
-    padding: 30px 50px 0px 40px;
+    padding: 1rem 2.25rem 0rem 2.25rem;
 }
 
 img[alt="logo"] {
-    padding: 0px 40px 0px 40px;
+    padding: 0rem 2.25rem 1rem 2.25rem;
 }
 
 
 h3 {
+    margin-bottom: 0.75rem;
+    font-size: 20px;
     /* gives spacing to form */
-    margin-bottom: 15px;
 }
 
 label {
@@ -95,20 +102,58 @@ input:focus {
 
 /* SECTIONS */
 
-.sign-up-section {
+.theme-background    {
     color: white;
     background-color: var(--bg-theme);
-    padding: 50px;
+    padding: 2.25rem;
     border-radius: 10px;
-    margin: 12px;
+    margin: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
 }
 
 /* DESCRIPTION */
 .intro-text>div {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
 
+
+
+/* BUTTON */
+
+
+button {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5em;
+    padding: 15px 30px 15px 30px;
+    width: 8em;
+    border-radius: 5px;
+    background-color: var(--bg-theme);
+    font-weight: bolder;
+    color: white;
+    border: none;
+    font-size: 16px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.button-submit {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.login-text {
+    font-weight: bold;
+    color: var(--bg-theme)
+}
+
+a {
+    text-decoration: none;
+}
 
 
 /* TITLE */
