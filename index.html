@@ -13,45 +13,77 @@
 <body>
     
     <div class="main-container">
-        
         <div class="title">
             <h1>Dakeas.</h1>
             <div class="description"><em>A place to connect</em></div>
-            
+
         </div>
         <img src="assets/logo.svg" alt="logo">
-        <div class="sign-up-container">
-            <section class="intro-text">
-                <div>This is not a real online service! You know you need something
-                    like this in your life to help you realize your deepest dreams.
-                    <br>Sign up <span>now</span> to get started.
+  
+        <section class="intro-text">
+            <div>This is not a real online service! You know you need something
+                like this in your life to help you realize your deepest dreams.
+                <br>Sign up <span>now</span> to get started.
+            </div>
+            <h3>You <span style="">know</span> you want to.</h3>
+
+        </section>
+
+        <section class="sign-up-section">
+            <h3>Let's do this!</h3>
+
+            <form action="">
+
+                <div class="fname-container">
+
+                    <!-- <img src="" alt="fname-input-logo"> -->
+
+                    <label for="first-name" type="">First Name</label>
+                    <input type="text" placeholder="First Name" required>
+
+
                 </div>
-                <h3>You <span style="">know</span> you want to.</h3>
                 
-            </section>
-            
-            <section class="sign-up-section">
-                <h3>Let's do this!</h3>
+                <div class="lname-container">
+                    <label for="last-name">Second Name</label>
+                    <input type="text" placeholder="Second Name" required>
+                
+                </div>
 
-                <form action="">
-                    
-                    <div class="fname-container">
+                <div class="email-container">
+                    <label for="user-email"></label>
+                    <input type="email" placeholder="Email" required>
+                </div>
 
-                        <!-- <img src="" alt="fname-input-logo"> -->
-                        
-                        <label for="first-name" type="">First Name</label>
-                        <input type="text" placeholder="First Name">     
+                
+                <div class="phone-container">
+                    <label for="user-phone-number"></label>
+                    <input type="tel" placeholder="Phone" required>
+                </div>
 
-                        
-                    </div>
-                    
-                </form>
+                
+                <div class="password-container">
+                    <label for="password"></label>
+                    <input type="password" placeholder="Password" required>
 
-            </section>
-            
-            
-            
-        </div> 
-    </div>   
+
+                </div>
+                <div class="confirm-password-container">
+                    <label for="confirm-password"></label>
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                
+                <button type="submit">Submit</button>
+            </form>
+
+        </section>
+
+        
+
+
+
+
+    </div>
+
 </body>
 </html>

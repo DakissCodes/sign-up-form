@@ -1,7 +1,8 @@
 
 :root {
 
-    --bg-theme: rgba(92, 139, 126, 255);
+    --bg-theme: rgba(247, 159, 123, 255);
+    --card-color: rgb(235, 235, 235);
 }
 
  
@@ -16,10 +17,11 @@
 
 .main-container {
     /* main container (whole sign up form + logo) */
+
     margin: 40px; 
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: white;
+    background-color: rgb(235, 235, 235);
 }
 
 .fname-container {
@@ -43,53 +45,69 @@ section {
 }
 
 .intro-text{
-    padding: 40px;
+    padding: 30px 50px 0px 40px;
 }
 
 img[alt="logo"] {
     padding: 0px 40px 0px 40px;
 }
 
-img[alt="background-image"] {
+
+h3 {
+    /* gives spacing to form */
+    margin-bottom: 15px;
 }
-
-
-body {
-    background-image: url(assets/background-image.jpg);
-}
-
-
 
 label {
     /* hiding the label, using placeholder as label instead */
     display: none;
 }
 
-.fname-container input[type='text'] {
+.fname-container input[type='text'],
+.lname-container input[type="text"]{
+    /* more code */
     /* setting up input box */
+}
+
+
+input {
+    /* setting up input box */
+    font-size: 16px;
     height: 2.75em;
     width: 100%;
     border: none;
-    border-bottom: 3px solid white;
+    border-bottom: 1px solid var(--card-color);
     color: white;
     background-color: var(--bg-theme);
+    padding: 10px;
+    margin-bottom: 15px;
+
 }
 
-.fname-container input[type="text"]::placeholder {
-    /* placeholder of input box */
-    font-size: 16px;
-    color: white;
+input::placeholder {
+   font-size: 16px; 
+   color: var(--card-color);
 }
 
+input:focus {
+    outline-width: 0;
+}
 
+/* SECTIONS */
 
 .sign-up-section {
     color: white;
     background-color: var(--bg-theme);
-    padding: 40px;
+    padding: 50px;
     border-radius: 10px;
-    margin: 10px;
+    margin: 12px;
 }
+
+/* DESCRIPTION */
+.intro-text>div {
+    margin-bottom: 15px;
+}
+
 
 
 
@@ -100,7 +118,7 @@ title {
 }
 
 .title {
-    padding: 40px;
+    padding: 50px;
 }
 
 .title > h1 {
@@ -109,7 +127,8 @@ title {
 
 .description {
     position: relative;
-    font-size: 12px;
+    font-size: 16px;
     bottom: 8px;
     font-weight: 100;
 }
+
