@@ -11,6 +11,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    border: 1px solid lightgrey;
     
 }
 /* FLEX CONTAINERS */
@@ -28,6 +29,7 @@ body {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #ffffff7d;
+
 }
 
 .fname-container {
@@ -43,6 +45,9 @@ form {
 }
 
 /* STYLING */
+h1 {
+    font-size: 36px;
+}
 
 section {
     /* setting section as container for h3 and form */
@@ -50,32 +55,35 @@ section {
     flex-direction: column;
 }
 
-.intro-text{
-    padding: 1rem 2.25rem 0rem 2.25rem;
+.logo-section{
+    padding: 2.25rem;
 }
 
+
+
 img[alt="logo"] {
-    padding: 0rem 2.25rem 1rem 2.25rem;
+    /* padding: 0rem 2.25rem 1rem 2.25rem; */
+    margin-bottom: 2rem;
 }
 
 
 h3 {
-    margin-bottom: 0.75rem;
     font-size: 20px;
     /* gives spacing to form */
 }
 
-label {
-    /* hiding the label, using placeholder as label instead */
-    display: none;
-}
+
+/* INPUT */
 
 .fname-container input[type='text'],
 .lname-container input[type="text"]{
     /* more code */
     /* setting up input box */
 }
-
+label {
+    /* hiding the label, using placeholder as label instead */
+    display: none;
+}
 
 input {
     /* setting up input box */
@@ -107,14 +115,15 @@ input:focus {
     background-color: var(--bg-theme);
     padding: 2.25rem;
     border-radius: 10px;
-    margin: 1.5rem;
+    margin-bottom: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
 }
 
 /* DESCRIPTION */
-.intro-text>div {
-    margin-bottom: 1rem;
+
+.intro-text * {
+    padding-bottom: .5rem;
 }
 
 
@@ -142,8 +151,6 @@ button {
 }
 
 .button-submit {
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
 }
 
 .login-text {
@@ -163,7 +170,7 @@ title {
 }
 
 .title {
-    padding: 50px;
+    /* padding: 50px; */
 }
 
 .title > h1 {
@@ -177,3 +184,54 @@ title {
     font-weight: 100;
 }
 
+.section-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up-section {
+    display: flex;
+    padding: 0rem 2.25rem 2.25rem 2.25rem;
+    
+}
+
+
+@media only screen and (min-width: 700px) {
+    
+
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+    .main-container {
+        display: flex;
+        max-width: 1000px;
+
+    }
+    
+
+    .section-container {
+        flex-direction: column;
+        flex: 0 0 auto;
+    }
+
+    form {
+        width: 450px;
+    }
+    
+    .intro-text {
+        margin-bottom: 2rem;
+    }
+    
+    .sign-up-section {
+        padding: 2.25rem 2.25rem 2.25rem 0rem;
+    }
+    .logo-section {
+        padding: 2.25rem 2.25rem 0rem 2.25rem;
+    }
+    .theme-background {
+        /* margin: 2.25rkem; */
+    }
+
+}
