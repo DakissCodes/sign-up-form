@@ -13,7 +13,7 @@
     padding: 0px;
     
 }
-/* FLEX CONTAINERS */
+/* MAIN CONTAINERS */
 
 body {
     background-image: url(assets/background-image-2.jpg);
@@ -27,7 +27,72 @@ body {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #ffffff7d;
+    
+}
 
+
+section {
+    /* setting section as container for h3 and form */
+    display: flex;
+    flex-direction: column;
+}
+
+/* LOGO SECTION */
+
+h1 {
+    font-size: 36px;
+}
+
+.logo-section{
+    padding: 2.25rem;
+}
+
+img[alt="logo"] {
+    /* padding: 0rem 2.25rem 1rem 2.25rem; */
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 20px;
+    /* gives spacing to form */
+}
+
+.flex-logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-text * {
+    padding-bottom: .5rem;
+}
+
+title {
+    position: relative
+}
+
+
+
+.title > h1 {
+    color: var(--bg-theme)
+}
+
+.description {
+    position: relative;
+    font-size: 16px;
+    bottom: 8px;
+    font-weight: 100;
+}
+
+/* SIGN-UP SECTION */
+
+.form-container    {
+    color: white;
+    background-color: var(--bg-theme);
+    padding: 2.25rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
 }
 
 .fname-container {
@@ -42,42 +107,6 @@ form {
     flex-direction: column;
 }
 
-/* STYLING */
-h1 {
-    font-size: 36px;
-}
-
-section {
-    /* setting section as container for h3 and form */
-    display: flex;
-    flex-direction: column;
-}
-
-.logo-section{
-    padding: 2.25rem;
-}
-
-
-
-img[alt="logo"] {
-    /* padding: 0rem 2.25rem 1rem 2.25rem; */
-    margin-bottom: 2rem;
-}
-
-
-h3 {
-    font-size: 20px;
-    /* gives spacing to form */
-}
-
-
-/* INPUT */
-
-.fname-container input[type='text'],
-.lname-container input[type="text"]{
-    /* more code */
-    /* setting up input box */
-}
 label {
     /* hiding the label, using placeholder as label instead */
     display: none;
@@ -94,11 +123,11 @@ input {
     background-color: var(--bg-theme);
     padding: 10px;
     margin-bottom: 15px;
-
+    
 }
 
 input::placeholder {
-   font-size: 16px; 
+    font-size: 16px; 
    color: var(--card-color);
 }
 
@@ -106,28 +135,13 @@ input:focus {
     outline-width: 0;
 }
 
-/* SECTIONS */
-
-.theme-background    {
-    color: white;
-    background-color: var(--bg-theme);
-    padding: 2.25rem;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.sign-up-section {
+    display: flex;
+    padding: 0rem 2.25rem 2.25rem 2.25rem;
     
 }
 
-/* DESCRIPTION */
-
-.intro-text * {
-    padding-bottom: .5rem;
-}
-
-
-
-
-/* BUTTON */
+/* BUTTON SECTION*/
 
 
 button {
@@ -161,40 +175,8 @@ a {
 }
 
 
-/* TITLE */
-
-title {
-    position: relative
-}
-
-.title {
-    /* padding: 50px; */
-}
-
-.title > h1 {
-    color: var(--bg-theme)
-}
-
-.description {
-    position: relative;
-    font-size: 16px;
-    bottom: 8px;
-    font-weight: 100;
-}
-
-.section-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.sign-up-section {
-    display: flex;
-    padding: 0rem 2.25rem 2.25rem 2.25rem;
-    
-}
-
 .main-container {
-    margin: 3rem;
+    margin: 1rem;
 }
 
 @media only screen and (min-width: 700px) {
@@ -237,8 +219,32 @@ title {
     .logo-section {
         padding: 2.25rem 2.25rem 0rem 2.25rem;
     }
-    .theme-background {
-        /* margin: 2.25rkem; */
-    }
 
+    body {
+        position: relative;
+    }
+    
+    .image-credit {
+        position: absolute;
+        bottom: -1px;
+    }
+}
+
+
+.confirm-password-container {
+    position: relative;
+}
+
+.error-message {
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    left: 4px;
+}
+
+.image-credit {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
 }

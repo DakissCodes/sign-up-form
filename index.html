@@ -11,16 +11,15 @@
     rel="stylesheet">
 </head>
 <body>
-    
     <div class="main-container">
         
-            <section class="logo-section">
+        <section class="logo-section">
                 
-                <div class="section-container">
+                <div class="flex-logo-container">
                     <div class="title">
                         <h1>Dakeas.</h1>
                         <div class="description"><em>A place to connect</em></div>
-                
+                        
                     </div>
                     <img src="assets/logo.svg" alt="logo">
                     
@@ -38,54 +37,54 @@
                 
             </section>
 
-            <section class="sign-up-section ">
+            <section class="sign-up-section">
                 
-                <form action="">
-                    <div class="theme-background">
-                       <h3>Let's do this!</h3>
+                <form action="" id="signup-form">
+                    <div class="form-container">
+                        <h3>Let's do this!</h3>
                         <div class="fname-container">
-                        
+                            
                             <!-- <img src="" alt="fname-input-logo"> -->
-                        
+                            
                             <label for="first-name" type="">First Name</label>
-                            <input type="text" placeholder="First Name" required>
-                        
-                        
+                            <input type="text" placeholder="First Name" name="first-name"  required>
+                            
+                            
                         </div>
                         
                         <div class="lname-container">
-                            <label for="last-name">Second Name</label>
-                            <input type="text" placeholder="Second Name" required>
+                            <label for="last-name">Last Name</label>
+                            <input type="text" placeholder="Second Name" name="last-name"  required>
                         
                         </div>
                         
                         <div class="email-container">
                             <label for="user-email"></label>
-                            <input type="email" placeholder="Email" required>
+                            <input type="email" placeholder="Email" name="user-email"  required>
                         </div>
                         
                         
                         <div class="phone-container">
                             <label for="user-phone-number"></label>
-                            <input type="tel" placeholder="Phone" required>
+                            <input type="tel" placeholder="Phone" name="user-phone-number" required>
                         </div>
                         
                         
                         <div class="password-container">
-                            <label for="password"></label>
-                            <input type="password" placeholder="Password" required>
+                            <label for="initial-password"></label>
+                            <input type="password" placeholder="Password" name="initial-password" required>
                         
                         
                         </div>
                         <div class="confirm-password-container">
                             <label for="confirm-password"></label>
-                            <input type="password" placeholder="Confirm Password" required>
+                            <input type="password" placeholder="Confirm Password" name="confirm-password" required>
                         </div>
                             
                    </div> 
                    
                    <div class="button-submit">
-                        <button type="submit">
+                       <button type="submit">
                             <div>Submit</div>
                         </button>
                         <div>Already have an account? <a href=""><span class="login-text">Log in</span></a></div>
@@ -98,11 +97,14 @@
             
         </div>
 
+        
 
-
-
-
+        
+        
     </div>
-
+    <div class="image-credit">
+        Photo by <a href="https://unsplash.com/s/photos/annie-spratt">Annie Spratt</a> on <a href="https://unsplash.com/">Unsplash</a>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
