@@ -35,10 +35,12 @@ form.addEventListener('submit', function(event) {
     if (initialPassword.value == confirmPassword.value) {
         form.submit();
         // manually submit 
-    } else {z
+    } else {
         confirmPasswordContainer[0].appendChild(unmatchedError);
         // validation text  
     }
 
     
 })
+
+

@@ -3,6 +3,8 @@
 
     --bg-theme: rgba(247, 159, 123, 255);
     --card-color: rgb(235, 235, 235);
+    --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --snow-white-low-opacity: rgb(255,250, 250, 0.3)
 }
 
  
@@ -11,7 +13,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    
+    /* border: 1px solid lightgrey; */
 }
 /* MAIN CONTAINERS */
 
@@ -62,8 +64,9 @@ h3 {
     flex-direction: column;
 }
 
+
 .intro-text * {
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 }
 
 title {
@@ -85,21 +88,43 @@ title {
 
 /* SIGN-UP SECTION */
 
+.form-container > div {
+    position: relative;
+}
+
+
+label {
+    transition: all 0.3s;
+    position: absolute;
+    font-size: 10px;
+    left: 10px;
+    top: 12px;
+    color: transparent;
+}
+
+
+input:focus::placeholder {
+    transition: all 0.1s;
+    color: transparent;
+}
+
+input:focus + label{
+    color: var(--card-color)
+    
+}
+
+
 .form-container    {
     color: white;
     background-color: var(--bg-theme);
-    padding: 2.25rem;
+    padding: 2.25rem 2rem 1.5rem 2rem;
     border-radius: 10px;
     margin-bottom: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
 }
 
-.fname-container {
-    /* sets logo and input (and label) as flex elements in row */
-    display: flex;
-    flex-direction: row;
-}
+
 
 form {
     /* setting form as flex container so that each input is a flex element */
@@ -109,26 +134,36 @@ form {
 
 label {
     /* hiding the label, using placeholder as label instead */
-    display: none;
+    /* display: none; */
+    /* display: none; */
 }
 
 input {
+    
     /* setting up input box */
     font-size: 16px;
-    height: 2.75em;
+    /* height: 2.75em; */
     width: 100%;
-    border: none;
-    border-bottom: 1px solid var(--card-color);
+    /* border: none; */
+    /* border-top: 2px solid var(--snow-white-low-opacity); */
+    /* border: 2px solid var(--card-color); */
+    
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid var(--card-color);
+    
     color: white;
     background-color: var(--bg-theme);
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
+    margin-top: 5px;
     margin-bottom: 15px;
     
 }
 
 input::placeholder {
     font-size: 16px; 
-   color: var(--card-color);
+   color: var(--snow-white-low-opacity);
 }
 
 input:focus {
@@ -137,18 +172,18 @@ input:focus {
 
 .sign-up-section {
     display: flex;
-    padding: 0rem 2.25rem 2.25rem 2.25rem;
+    padding: 0rem 1.25rem 2.25rem 1.25rem;
     
 }
 
 /* BUTTON SECTION*/
 
 
-button {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     height: 2.5em;
     padding: 15px 30px 15px 30px;
     width: 8em;
@@ -162,8 +197,6 @@ button {
     margin-bottom: 1rem;
 }
 
-.button-submit {
-}
 
 .login-text {
     font-weight: bold;
@@ -210,14 +243,14 @@ a {
     }
     
     .intro-text {
-        margin-bottom: 2rem;
+        margin-top: 30px;
     }
     
     .sign-up-section {
-        padding: 2.25rem 2.25rem 2.25rem 0rem;
+        padding: 1.5rem 2.25rem 1.25rem 0rem;
     }
     .logo-section {
-        padding: 2.25rem 2.25rem 0rem 2.25rem;
+        padding: 1.5rem 2.25rem 1.25rem 2.25rem;
     }
 
     body {
@@ -226,11 +259,16 @@ a {
     
     .image-credit {
         position: absolute;
-        bottom: -1px;
+        bottom: 1px;
+        right: 15px;
+    }
+
+    img[alt="logo"] {
+        margin-top: 10px;
     }
 }
 
-
+/* ERROR MESSAGE */
 .confirm-password-container {
     position: relative;
 }
@@ -242,9 +280,277 @@ a {
     position: absolute;
     left: 4px;
 }
-
+/* IMAGE CREDIT */
 .image-credit {
     font-size: 12px;
     text-align: center;
     margin-bottom: 10px;
+}
+
+
+
+/* ANIMATIONS */
+/* button */
+.btn {
+    /* transition-property: transform; */
+    /* how long the transition should take */
+    /* transition-duration: 0.3s; */
+    /* transition curve, ease in, ease out, ease in out, linear, ease (default) */
+    /* transition-timing-function: ease; */
+    /* delay before transition takes place */
+    /* transition-delay: 0; */
+    /* shortcut */
+    
+    /* transition: transform 0.3s ease 0; */
+    /* transition-property: transform, background-color; */
+
+    /* transition: transform 0.3s, background-color 0.3s, color 0.3s; */
+    /* same property on all */
+    transition: all 0.3s;
+
+}
+
+.btn:hover {
+    transform: translateY(-10px);
+    background-color: white;
+    color: var(--bg-theme)
+}
+
+/* login text */
+
+
+.login-text {
+    transition: all 0.3s;
+}
+
+.login-text:hover {
+    color: black;
+    text-shadow: var(--box-shadow);
+}
+
+/* ANIMATIONS */
+
+@keyframes slideInLeft {
+    /* Beginning of animation */
+    from {
+        transform: translateX(180px);
+    }
+   
+    /* end of animation */
+    to {
+        transform: translateX(0px)
+    }
+}
+
+
+.title-heading,
+.description {
+    /* selecting the keyframe to animate element */
+    /* animation-name: slideInLeft; */
+    /* how long the animation takes place */
+    /* animation-duration: 1s; */
+    /* animation curve */
+    /* animation-timing-function: ease; */
+    /* animation delay */
+    /* animation-delay: 0.5s; */
+    /* number of laps, numberof times it will animate */
+    /* infinite property to run forever */
+    /* animation-iteration-count: 1; */
+    /* normal, reverse : reverse means starting from end keyframe to start */
+    /* animation-direction: normal; */
+    /* forwards, backwards, both:
+    forwards: only executes the transform before keyframes
+    backwards: only executes the transform after keyframes 
+    both: does not execute transform
+    */
+/*     
+    animation-fill-mode: backwards;
+    transform: translateX(100px); */
+    /* animation-fill-mode: forwards; */
+    /* transform: translateX(180px); */
+    
+
+    /* shorthand property */
+    
+    /* animation: name duration timing-function delay interation count direction fill mode */
+    /* animation: slideInLeft 1s ease 0.5s 1 normal forwards */
+}
+
+
+
+.slideInLeft {
+    /* utility class */
+     /* always make a class for the animation for clean code*/
+     animation: slideInLeft;
+    transform: translateX(180px)
+}
+
+.transition-ease {
+    transition: all 0.3s;
+}
+
+.transition-ease-fast {
+    transition: all 0.2s;
+}
+
+.intro-text > h3:hover {
+    color: var(--bg-theme);
+    transform: scale(1.04);
+}
+
+/* UTILITY CLASS EXAMPLES FOR CLEAN CODE */
+
+
+.animate {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+.animation--infinite {
+    animation-iteration-count: infinite;
+}
+
+.animation--delay {
+    animation-delay: 0.5s;
+}
+
+.animation--forwards {
+    animation-fill-mode: forwards;
+}
+
+.animation--fast {
+    animation-duration: 0.6s;
+}
+
+.animation--slow {
+    animation-duration: 2s;
+}
+
+
+
+/* title */
+
+
+.title:hover {
+    transform: scale(1.03);
+
+}
+
+
+/* image logo */
+@keyframes bubbleAnimation{
+
+    0%,
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+        transform: translateX(-30px) rotate(-3deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+        transform: translateX(15px) rotate(2deg);
+    }
+
+    45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+        transform: translateX(-15px) rotate(-2deg);
+    }
+
+    60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+        transform: translateX(9px) rotate(1deg);
+    }
+
+    75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+        transform: translateX(-6px) rotate(-1deg);
+    }
+
+}
+
+img[alt="logo"] {
+    animation-name: bubbleAnimation;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+/* BOUNCE ANIMATION */
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+    
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    animation-name: bounce;
+    
+}
+
+
+.sign-up-heading:hover {
+    animation-name: bounce;
+}
+
+
+/* INPUT ANIMATIONS */
+
+
+
+input:focus:valid {
+    border: 2px solid white;
+    background-color: rgb(0, 255, 0,0.2);
+    border-radius: 3px;
+}
+
+
+input:focus:invalid {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+
+
+
+@keyframes wrap-around {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+
+    60% {
+        transform: translateY(-15px);
+    }
 }

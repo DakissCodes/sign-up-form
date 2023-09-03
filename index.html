@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap"
     rel="stylesheet">
 </head>
 <body>
@@ -16,20 +16,21 @@
         <section class="logo-section">
                 
                 <div class="flex-logo-container">
-                    <div class="title">
-                        <h1>Dakeas.</h1>
-                        <div class="description"><em>A place to connect</em></div>
+                    <div class="title transition-ease">
+                        <h1 class="title-heading slideInLeft animation--delay animation--fast animation--forwards">Dakeas.</h1>
+                        <div class="description slideInLeft animation--delay animation--slow animation--forwards"><em>A place to connect</em></div>
                         
                     </div>
                     <img src="assets/logo.svg" alt="logo">
                     
                     <div class="intro-text">
-                        <div>This is not a real online service! You know you need something
+                        <div class="slideInLeft animation--fast animation--delay animation--forwards">This is not a real online service! You know you need something
                             like this in your life to help you realize your deepest dreams. 
                         </div>
                         
-                        <div>Sign up now to get started.</div>
-                        <h3>You <span style="">know</span> you want to.</h3>
+                        <div class="slideInLeft animation--fast animation--delay animation--forwards">Sign up now to get started.</div>
+                        
+                        <h3 class="transition-ease slideInLeft animation--slow animation--delay animation--forwards">You <span style="">know</span> you want to.</h3>
                         
                     </div>
                     
@@ -41,53 +42,51 @@
                 
                 <form action="" id="signup-form">
                     <div class="form-container">
-                        <h3>Let's do this!</h3>
+                        <h3 class="sign-up-heading animate">Let's do this!</h3>
                         <div class="fname-container">
                             
-                            <!-- <img src="" alt="fname-input-logo"> -->
-                            
-                            <label for="first-name" type="">First Name</label>
-                            <input type="text" placeholder="First Name" name="first-name"  required>
+                            <input class="transition-ease-fast" type="text" placeholder="First Name" name="first-name"  required>
+                            <label for="first-name">First Name</label>
                             
                             
                         </div>
                         
                         <div class="lname-container">
+                            <input class="transition-ease-fast" type="text" placeholder="Second Name" name="last-name"  required>
                             <label for="last-name">Last Name</label>
-                            <input type="text" placeholder="Second Name" name="last-name"  required>
                         
                         </div>
                         
                         <div class="email-container">
-                            <label for="user-email"></label>
-                            <input type="email" placeholder="Email" name="user-email"  required>
+                            <input class="transition-ease-fast" type="email" placeholder="Email" name="user-email"  required>
+                            <label for="user-email">Email</label>
                         </div>
                         
                         
                         <div class="phone-container">
-                            <label for="user-phone-number"></label>
-                            <input type="tel" placeholder="Phone" name="user-phone-number" required>
+                            <input class="transition-ease-fast" type="tel" placeholder="Phone" name="user-phone-number" required>
+                            <label for="user-phone-number">Phone</label>
                         </div>
                         
                         
                         <div class="password-container">
-                            <label for="initial-password"></label>
-                            <input type="password" placeholder="Password" name="initial-password" required>
+                            <input class="transition-ease-fast" type="password" placeholder="Password" name="initial-password" required>
+                            <label for="initial-password">Password</label>
                         
                         
                         </div>
                         <div class="confirm-password-container">
-                            <label for="confirm-password"></label>
-                            <input type="password" placeholder="Confirm Password" name="confirm-password" required>
+                            <input class="transition-ease-fast" type="password" placeholder="Confirm Password" name="confirm-password" required>
+                            <label for="confirm-password">Confirm Password</label>
                         </div>
                             
                    </div> 
                    
                    <div class="button-submit">
-                       <button type="submit">
+                       <button type="submit" class="btn .bounce">
                             <div>Submit</div>
                         </button>
-                        <div>Already have an account? <a href=""><span class="login-text">Log in</span></a></div>
+                        <div class="alr-account-text">Already have an account? <a href=""><span class="login-text">Log in</span></a></div>
                    </div>
                 </form>
     
