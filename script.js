@@ -11,10 +11,6 @@ const form = document.getElementById('signup-form');
 
 const confirmPasswordContainer = document.getElementsByClassName('confirm-password-container');
 // function that gets the value of all elements
-// 
-
-
-
 
 
 // validation text
